@@ -1,0 +1,29 @@
+package helper;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+public class Utility {
+		
+		public static WebElement waitForWebelement(WebDriver driver, By element)
+		{
+			WebDriverWait wait = new WebDriverWait(driver,  30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(element));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			return driver.findElement(element);
+			
+		}
+		
+		public static WebElement waitForWebelement(WebDriver driver, WebElement element)
+		{
+			WebDriverWait wait = new WebDriverWait(driver,  30);
+			wait.until(ExpectedConditions.visibilityOf(element));
+			wait.until(ExpectedConditions.elementToBeClickable(element));
+			return element;
+		}
+	
+
+}

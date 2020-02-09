@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [TestNGSmoke]">
+  <test name="FirstSmoke">
+    <classes>
+      <class name="test.DemoTest"/>
+    </classes>
+  </test> <!-- FirstSmoke -->
+  <test name="FirstSmoke(failed)">
+    <classes>
+      <class name="test.DemoTest">
+        <methods>
+          <include name="verifyFirstPage"/>
+          <include name="startBrowser"/>
+        </methods>
+      </class> <!-- test.DemoTest -->
+    </classes>
+  </test> <!-- FirstSmoke(failed) -->
+</suite> <!-- Failed suite [TestNGSmoke] -->
